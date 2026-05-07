@@ -24,9 +24,10 @@ TARGET = "log_price"
 PRICE_COL = "lastSoldPrice_hpi_adjusted"
 
 # Load test predictions from individual models
-pred_tab = pd.read_csv("submissions/my_team_01.csv")
-pred_img = pd.read_csv("submissions/my_team_02.csv")
-pred_txt = pd.read_csv("submissions/my_team_03.csv")
+pred_tab = pd.read_csv("submissions/test_lgbm_07.csv")
+pred_img = pd.read_csv("submissions/test_image_08.csv")
+pred_txt = pd.read_csv("submissions/test_text_09.csv")
+
 
 # Merge on zpid to align
 test_preds = test[["zpid"]].copy()
@@ -53,8 +54,8 @@ submission = pd.DataFrame({
     "zpid": test_preds["zpid"],
     "predicted_price": ensemble_price,
 })
-submission.to_csv("submissions/my_team_04.csv", index=False)
-print(f"\nSaved submissions/my_team_04.csv ({len(submission)} rows)")
+submission.to_csv("submissions/Grupo_10_ensemble_original.csv", index=False)
+print(f"\nSaved submissions/Grupo_10_ensemble_original.csv ({len(submission)} rows)")
 print(f"Weights: tabular={W_TAB}, image={W_IMG}, text={W_TXT}")
 
 # ── Better approach: Ridge stacking on OOF predictions ───────────────────

@@ -1,0 +1,10 @@
+{
+  "n_svd": 256,
+  "learning_rate": 0.011900918813309359,
+  "num_leaves": 138,
+  "min_child_samples": 47,
+  "feature_fraction": 0.6423118246072456,
+  "bagging_fraction": 0.6279041129702573,
+  "reg_alpha": 0.0025069135894728177,
+  "reg_lambda": 1.476938080970932
+}
