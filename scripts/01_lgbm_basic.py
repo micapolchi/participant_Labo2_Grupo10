@@ -57,5 +57,5 @@ submission = pd.DataFrame({
     "zpid": test["zpid"],
     "predicted_price": np.expm1(test_pred_log),
 })
-submission.to_csv("submissions/my_team_01.csv", index=False)
-print(f"\nSaved submissions/my_team_01.csv ({len(submission)} rows)")
+submission.to_csv("submissions/my_test_sharon_1.csv", index=False)
+print(f"\nSaved submissions/my_test_sharon_1.csv ({len(submission)} rows)")
